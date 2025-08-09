@@ -294,7 +294,7 @@ async def process_verification(data):
 @app_commands.check(is_admin)
 async def verify_panel(interaction: discord.Interaction):
     # Send hidden confirmation message first
-    await interaction.response.send_message("Panel sent", ephemeral=True)
+    await button_interaction.followup.send(embed=embed, ephemeral=True)
     
     # Create the verification panel embed
     embed = discord.Embed(
