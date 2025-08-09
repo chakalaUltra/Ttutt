@@ -305,7 +305,7 @@ async def verify_panel(interaction: discord.Interaction):
     embed.set_image(url="https://cdn.discordapp.com/attachments/1330685351412498480/1403393124692398162/Screenshot_20250808-1753442.png?ex=68976332&is=689611b2&hm=575bee2a6ed0d2e351e93ebe0ac451230d671f8e4bb3dde98c20dc37ca3ee7b7&")
     button = discord.ui.Button(label="🔐 Verify", style=discord.ButtonStyle.grey)
 
-    async def button_callback(button_interaction: discord.Interaction):
+    async def button_callback(interaction: discord.Interaction):
         # Build OAuth2 URL with proper URL-encoding
         await button_interaction.response.defer(ephemeral=True)
         params = {
