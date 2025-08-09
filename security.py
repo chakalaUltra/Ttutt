@@ -307,6 +307,7 @@ async def verify_panel(interaction: discord.Interaction):
 
     async def button_callback(button_interaction: discord.Interaction):
         # Build OAuth2 URL with proper URL-encoding
+        await button_interaction.response.defer(ephemeral=True)
         params = {
             "client_id": CLIENT_ID,
             "redirect_uri": REDIRECT_URI,
