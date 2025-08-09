@@ -13,11 +13,10 @@ import urllib.parse
 import math
 
 # ==== Config ====
-
-CLIENT_ID = "1400037369830178898"
-CLIENT_SECRET = "AnQC6eot6dHkHpSJ2j_l5AttgQ683LG9"  # <-- REPLACE THIS
-BOT_TOKEN = "MTQwMDAzNzM2OTgzMDE3ODg5OA.GoWS3j.0EnVIIKHL7941_cEfiLr9wiLypI04sKsOYQ0IM"          # <-- REPLACE THIS
-REDIRECT_URI = "https://857f9486-b629-4803-be57-9796b7051789-00-1uyzgnhv48tpj.riker.replit.dev/oauth/callback"  # Must exactly match your OAuth2 Redirect URI in Discord dev portal
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+CLIENT_ID = os.environ.get("CLIENT_ID")
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+REDIRECT_URI = os.environ.get("REDIRECT_URI")
 
 CONFIG_PATH = "server_configs.json"
 BLACKLISTED_PATH = "blacklisted_servers.json"
