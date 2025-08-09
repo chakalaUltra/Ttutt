@@ -16,7 +16,7 @@ import math
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 CLIENT_ID = os.environ.get("CLIENT_ID")
 CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
-REDIRECT_URI = ("https://ttutt-2.onrender.com/")
+REDIRECT_URI = "https://ttutt-2.onrender.com/oauth/callback"
 
 CONFIG_PATH = "server_configs.json"
 BLACKLISTED_PATH = "blacklisted_servers.json"
