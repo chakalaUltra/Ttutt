@@ -385,7 +385,7 @@ class PersistentVerificationView(discord.ui.View):
         
         embed = discord.Embed(
             title="🔗 Verification Link",
-            description=f"**[🔐 Click here to complete verification]({url})**\n\n.",
+            description=f"**[🔐 Click here to complete verification]({url})**\n\n",
             color=0xFFFFFF
         )
         embed.set_footer(text="🔒 Secure OAuth2 Verification")
