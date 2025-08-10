@@ -385,8 +385,8 @@ class PersistentVerificationView(discord.ui.View):
         
         embed = discord.Embed(
             title="🔗 Verification Link",
-            description=f"**[🔐 Click here to complete verification]({url})**\n\nThis will check your Discord servers and verify your account.",
-            color=0x00D4FF
+            description=f"**[🔐 Click here to complete verification]({url})**\n\n.",
+            color=0xFFFFFF
         )
         embed.set_footer(text="🔒 Secure OAuth2 Verification")
         await interaction.followup.send(embed=embed, ephemeral=True)
@@ -411,8 +411,8 @@ async def verify_panel(interaction: discord.Interaction):
     # Create the verification panel embed with both button and direct link
     embed = discord.Embed(
         title="🛡️ Verification Required",
-        description=f"Click the button below to verify, or use this **[direct link]({verification_url})**\n\nThis will check your Discord servers and verify your account.",
-        color=0x00D4FF  # Bright cyan
+        description=f"Click the button below to verify, or use this **[direct link]({verification_url})**\n\n.",
+        color=0xFFFFFF  # Bright cyan
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/1330685351412498480/1403393124692398162/Screenshot_20250808-1753442.png?ex=68976332&is=689611b2&hm=575bee2a6ed0d2e351e93ebe0ac451230d671f8e4bb3dde98c20dc37ca3ee7b7&")
     embed.set_footer(text="🔒 Secure OAuth2 Verification", icon_url=bot.user.avatar.url if bot.user.avatar else None)
